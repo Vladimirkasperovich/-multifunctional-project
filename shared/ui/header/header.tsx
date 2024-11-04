@@ -7,7 +7,11 @@ interface Props {
 export const Header: React.FC<Props> = ({}) => {
   return (
     <header className={s.main}>
-      <div></div>
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci
+        </p>
+      </div>
     </header>
   );
 };
