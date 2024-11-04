@@ -1,5 +1,35 @@
-@use "../../styles/global";
-
 .main {
-  background: global.$base-color;
+  background: linear-gradient(135deg, #1a79cf, #1acfcf);
+  height: 70px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background: linear-gradient(135deg, #1acfcf, #1a79cf);
+  }
+
+  .block {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+
+    .making__future,
+    .sign__in {
+      font-size: 1.5rem;
+      color: #fff;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
 }

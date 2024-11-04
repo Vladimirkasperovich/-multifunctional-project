@@ -1,16 +1,16 @@
 import React from "react";
-import s from "./header.module.scss";
+import styles from "./header.module.scss";
+
 interface Props {
   className?: string;
 }
 
 export const Header: React.FC<Props> = ({}) => {
   return (
-    <header className={s.main}>
-      <div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci
-        </p>
+    <header className={styles.main}>
+      <div className={styles.block}>
+        <h3 className={styles.making__future}>Making future</h3>
+        <h3 className={styles.sign__in}>Sign in</h3>
       </div>
     </header>
   );
