@@ -4,6 +4,9 @@
   background: linear-gradient(180deg, #1a79cf, #1e90ff);
   box-shadow: 2px 0 12px rgba(0, 0, 0, 0.15);
   border-radius: 0 8px 8px 0;
+  &:hover {
+    background: linear-gradient(180deg, #1a79cf, #1acfcf);
+  }
 
   .block {
     display: flex;
@@ -14,17 +17,19 @@
     .element {
       color: #ffffff;
       font-size: 1rem;
+      font-family: "Roboto Flex", sans-serif;
+      letter-spacing: 0.05em;
       font-weight: 600;
       padding: 10px 15px;
+      position: relative;
+      text-transform: uppercase;
       margin: 5px 0;
-      width: 100%;
-      transition: all 0.2s ease-in-out;
-      border-radius: 4px;
-
+      transition: transform 0.3s ease;
+      display: flex;
+      align-items: center;
+      column-gap: 5px;
       &:hover {
-        background-color: rgba(255, 255, 255, 0.2);
-        transform: scale(1.05);
-        cursor: pointer;
+        transform: scale(1.4);
       }
     }
   }
