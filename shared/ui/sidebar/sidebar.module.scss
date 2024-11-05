@@ -1,11 +1,20 @@
 .main {
-  width: 250px;
+  width: 65px;
   min-height: 100vh;
   background: linear-gradient(180deg, #1a79cf, #1e90ff);
   box-shadow: 2px 0 12px rgba(0, 0, 0, 0.15);
   border-radius: 0 8px 8px 0;
+  overflow: hidden;
+  -webkit-transition: width 1.2s linear;
+  transition: width 1.2s linear;
+  -webkit-transform: translateZ(0) scale(1, 1);
+  opacity: 1;
+
   &:hover {
     background: linear-gradient(180deg, #1a79cf, #1acfcf);
+    width: 250px;
+    overflow: hidden;
+    opacity: 1;
   }
 
   .block {
@@ -13,6 +22,7 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
+    width: 100%;
 
     .element {
       color: #ffffff;
@@ -20,7 +30,7 @@
       font-family: "Roboto Flex", sans-serif;
       letter-spacing: 0.05em;
       font-weight: 600;
-      padding: 10px 15px;
+      padding-top: 10px;
       position: relative;
       text-transform: uppercase;
       margin: 5px 0;
@@ -28,9 +38,35 @@
       display: flex;
       align-items: center;
       column-gap: 5px;
+
       &:hover {
         transform: scale(1.4);
       }
     }
+
+    .link {
+      opacity: 0;
+      white-space: nowrap;
+      transition: opacity 0.3s ease;
+      position: relative;
+      &:after {
+        content: "";
+        width: 0;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -1px;
+        height: 1px;
+        background-color: #fff;
+        transition: width 0.4s ease-in-out;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+  &:hover .block .element .link {
+    opacity: 1;
   }
 }
