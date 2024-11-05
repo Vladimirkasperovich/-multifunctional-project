@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Header } from "@/shared/ui";
+import { Header } from "@/shared";
+import { Sidebar } from "@/shared/ui/sidebar/sidebar";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +17,11 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
-        {children}
+        {/*Need to fix that */}
+        <div style={{ display: "flex" }}>
+          <Sidebar />
+          {children}
+        </div>
       </body>
     </html>
   );
