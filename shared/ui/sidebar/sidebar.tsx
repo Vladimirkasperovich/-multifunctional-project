@@ -11,7 +11,9 @@ export const Sidebar: React.FC = ({}) => {
     <nav className={styles.main}>
       <ul className={styles.block}>
         {sidebarItems.map((item) => (
-          <li key={item.id}>{item.value}</li>
+          <li key={item.id} className={styles.element}>
+            {item.value}
+          </li>
         ))}
       </ul>
     </nav>
