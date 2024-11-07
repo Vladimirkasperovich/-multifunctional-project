@@ -1,7 +1,6 @@
 import React from "react";
 import { AllProducts } from "@/modules/store/types";
 import Image from "next/image";
-
 interface Props {
   product: AllProducts;
 }
