@@ -1,6 +1,6 @@
 import { axiosInstance } from "./instance";
-import { AllProducts } from "./types";
+import { Product } from "./types";
 
-export const getAllProducts = async (): Promise<AllProducts[]> => {
-  return (await axiosInstance.get<AllProducts[]>("/products")).data;
+export const getAllProducts = async (): Promise<Product[]> => {
+  return (await axiosInstance.get<Product[]>("/products")).data;
 };
