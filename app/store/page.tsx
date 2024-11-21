@@ -1,5 +1,5 @@
-import { getAllProducts, StoreCard } from "@/modules";
 import styles from "./page.module.scss";
+import { getAllProducts, StoreCard } from "@/features";
 
 export default async function StorePage() {
   const allProducts = await getAllProducts();

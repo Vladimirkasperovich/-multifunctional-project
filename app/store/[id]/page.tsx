@@ -1,6 +1,6 @@
 import styles from "./page.module.scss";
 
-import { getSingleProduct } from "@/modules";
+import { getSingleProduct } from "@/features";
 import Image from "next/image";
 
 export default async function Product({
