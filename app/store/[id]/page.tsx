@@ -4,10 +4,11 @@ import { getSingleProduct } from "@/modules";
 import Image from "next/image";
 
 export default async function Product({
-  params: { id },
+  params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
+  const { id } = await params;
   const product = await getSingleProduct(String(id));
 
   return (
