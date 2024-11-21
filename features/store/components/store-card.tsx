@@ -1,8 +1,8 @@
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-import styles from "./store-card.module.scss";
-import { Product } from "@/features/store/types/types";
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import styles from './store-card.module.scss';
+import { Product } from '@/features/store/types/types';
 
 interface Props {
   product: Product;
