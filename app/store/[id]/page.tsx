@@ -1,7 +1,17 @@
 import styles from './page.module.scss';
 
-import { getProduct } from '@/features';
+import { getAllProducts, getProduct } from '@/features';
 import Image from 'next/image';
+
+export const revalidate = 60;
+export const dynamicParams = true;
+
+export async function generateStaticParams() {
+  const products = await getAllProducts();
+  return products.map((product) => ({
+    id: String(product.id),
+  }));
+}
 
 export default async function Product({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
