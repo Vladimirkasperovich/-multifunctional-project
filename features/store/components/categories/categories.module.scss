@@ -1,0 +1,40 @@
+.categoriesContainer {
+  display: flex;
+  //justify-content: center;
+  //align-items: center;
+  padding: 20px;
+}
+
+.categoriesList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+.categoryItem {
+  background: linear-gradient(135deg, #1a79cf, #33a1fd);
+  padding: 10px 20px;
+  border-radius: 20px;
+  max-height: 70px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.categoryName {
+  color: #fff;
+  font-weight: 600;
+  font-size: 2rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  white-space: nowrap;
+}

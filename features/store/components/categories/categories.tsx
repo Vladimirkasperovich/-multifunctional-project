@@ -8,10 +8,12 @@ interface Props {
 
 export const Categories: React.FC<Props> = ({ categories }) => {
   return (
-    <div className={styles.main}>
-      <ul>
-        {categories.map((category, index) => (
-          <li key={index}>{category}</li>
+    <div className={styles.categoriesContainer}>
+      <ul className={styles.categoriesList}>
+        {categories.map((category) => (
+          <li key={crypto.randomUUID()} className={styles.categoryItem}>
+            <h1 className={styles.categoryName}>{category}</h1>
+          </li>
         ))}
       </ul>
     </div>
