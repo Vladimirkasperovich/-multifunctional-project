@@ -12,3 +12,5 @@ interface ProductRating {
   rate: number;
   count: number;
 }
+
+export type AllCategories = 'electronics' | 'jewelery' | "men's clothing" | "women's clothing";

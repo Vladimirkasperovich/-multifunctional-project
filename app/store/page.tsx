@@ -1,14 +1,11 @@
-import styles from "./page.module.scss";
-import { getAllProducts, StoreCard } from "@/features";
+import styles from './page.module.scss';
+import { Categories, getCategories } from '@/features';
 
 export default async function StorePage() {
-  const allProducts = await getAllProducts();
-
+  const categories = await getCategories();
   return (
     <div className={styles.flex}>
-      {allProducts.map((product) => (
-        <StoreCard key={product.id} product={product} />
-      ))}
+      <Categories categories={categories} />
     </div>
   );
 }
